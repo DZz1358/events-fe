@@ -1,9 +1,9 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { EventsService } from '../../services/events.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Event } from '../../models/events.interface';
 import { NgClass, NgIf } from '@angular/common';
+import { EventsService } from '../../services/events.service';
 
 
 @Component({
@@ -45,10 +45,6 @@ export class RegisterComponent implements OnInit {
       name: eventData.name,
       email: eventData.email,
     }
-
-    console.log('eventData', eventData);
-    console.log('queryParams', queryParams);
-
 
 
     this.eventsService.addAttendance(params).subscribe(

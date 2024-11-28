@@ -7,7 +7,7 @@ import { Event } from '../models/events.interface';
   providedIn: 'root'
 })
 export class EventsService {
-  apiUrl = 'https://event-be-mu.vercel.app'
+  apiUrl = 'https://events-be.vercel.app'
 
   constructor(private http: HttpClient) { }
 

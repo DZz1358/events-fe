@@ -31,11 +31,9 @@ export class DashboardComponent implements OnInit {
     this.loading = true
 
     this.eventsService.getEvents().subscribe(data => {
-      console.log('data', data);
       this.eventsList = data;
       this.loading = false;
       this.updatePagination();
-
     });
 
   }
